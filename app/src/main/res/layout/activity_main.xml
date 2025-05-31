@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/gradient_accent"
+    android:padding="32dp"
+    android:fitsSystemWindows="true">
+
+    <!-- Weather Animation Container -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="64dp"
+        app:cardCornerRadius="120dp"
+        app:cardElevation="16dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:alpha="0.95">
+
+        <ImageView
+            android:id="@+id/weather_icon"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cuaca"
+            android:scaleType="centerInside"
+            android:contentDescription="Weather Icon" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- App Branding Section -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="48dp">
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weather Pro"
+            android:textColor="@android:color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/app_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="News &amp; Forecast"
+            android:textColor="#E3F2FD"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/app_description"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="Get accurate weather forecasts, breaking news, and real-time updates for your location and beyond."
+            android:textColor="#B0BEC5"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:paddingHorizontal="16dp" />
+
+    </LinearLayout>
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="28dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <Button
+                android:id="@+id/btn_get_started"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Get Started"
+                android:textColor="#1976D2"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@android:color/transparent"
+                android:fontFamily="sans-serif-medium" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btn_skip"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_gravity="center_horizontal"
+            android:text="Skip for now"
+            android:textColor="#90CAF9"
+            android:textSize="14sp"
+            android:background="@android:color/transparent"
+            android:paddingHorizontal="24dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
