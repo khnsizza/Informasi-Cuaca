@@ -1,4 +1,5 @@
-package com.example.tisproject;
+
+package com.example.tisproject.Model;
 
 public class HourlyWeatherData {
     private String time;

@@ -1,6 +1,7 @@
-package com.example.tisproject;
+package com.example.tisproject.Network;
 
 public class WeatherData {
+    // Detail cuaca
     private double temperature;
     private double feelsLike;
     private double tempMin;
@@ -17,8 +18,16 @@ public class WeatherData {
     private String sunset;
     private int rainChance;
 
-    public WeatherData() {}
+    // Forecast harian
+    private String day;
+    private String condition;
+    private int highTemp;
+    private int lowTemp;
+    private String rainChanceStr;
 
+    public WeatherData(String mon, String sunny, int i, int i1, String s) {}
+
+    // Getter dan Setter untuk detail cuaca
     public double getTemperature() { return temperature; }
     public void setTemperature(double temperature) { this.temperature = temperature; }
 
@@ -63,4 +72,20 @@ public class WeatherData {
 
     public int getRainChance() { return rainChance; }
     public void setRainChance(int rainChance) { this.rainChance = rainChance; }
+
+    // Getter dan Setter untuk forecast mingguan
+    public String getDay() { return day; }
+    public void setDay(String day) { this.day = day; }
+
+    public String getCondition() { return condition; }
+    public void setCondition(String condition) { this.condition = condition; }
+
+    public int getHighTemp() { return highTemp; }
+    public void setHighTemp(int highTemp) { this.highTemp = highTemp; }
+
+    public int getLowTemp() { return lowTemp; }
+    public void setLowTemp(int lowTemp) { this.lowTemp = lowTemp; }
+
+    public String getRainChanceStr() { return rainChanceStr; }
+    public void setRainChanceStr(String rainChanceStr) { this.rainChanceStr = rainChanceStr; }
 }

@@ -1,4 +1,4 @@
-package com.example.tisproject;
+package com.example.tisproject.Model;
 
 public class DailyWeatherData {
     private String day;

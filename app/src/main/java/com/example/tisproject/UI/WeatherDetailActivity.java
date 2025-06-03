@@ -1,10 +1,9 @@
-package com.example.tisproject;
+package com.example.tisproject.UI;
 
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.animation.Animation;
@@ -21,6 +20,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.example.tisproject.Adapter.HourlyForecastAdapter;
+import com.example.tisproject.Model.HourlyWeatherData;
+import com.example.tisproject.R;
+import com.example.tisproject.Model.WeatherApiService;
+import com.example.tisproject.Network.WeatherData;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
 

@@ -1,4 +1,4 @@
-package com.example.tisproject;
+package com.example.tisproject.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.tisproject.Model.DailyWeatherData;
+import com.example.tisproject.R;
 
 import java.util.List;
 

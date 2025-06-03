@@ -1,4 +1,4 @@
-package com.example.tisproject;
+package com.example.tisproject.UI;
 
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -8,6 +8,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.example.tisproject.Model.DailyWeatherData;
+import com.example.tisproject.R;
+import com.example.tisproject.Adapter.WeeklyForecastAdapter;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

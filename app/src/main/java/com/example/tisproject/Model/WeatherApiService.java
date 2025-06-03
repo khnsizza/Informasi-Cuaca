@@ -1,6 +1,9 @@
-package com.example.tisproject;
+
+package com.example.tisproject.Model;
 
 import android.util.Log;
+
+import com.example.tisproject.Network.WeatherData;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -148,7 +151,7 @@ public class WeatherApiService {
         String sunrise = timeFormat.format(new Date(sunriseTimestamp * 1000));
         String sunset = timeFormat.format(new Date(sunsetTimestamp * 1000));
 
-        WeatherData weatherData = new WeatherData();
+        WeatherData weatherData = new WeatherData("Mon", "Sunny", 33, 24, "10%");
         weatherData.setTemperature(temperature);
         weatherData.setFeelsLike(feelsLike);
         weatherData.setTempMin(tempMin);
