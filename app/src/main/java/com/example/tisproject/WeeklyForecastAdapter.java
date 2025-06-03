@@ -32,51 +32,25 @@ public class WeeklyForecastAdapter extends RecyclerView.Adapter<WeeklyForecastAd
         DailyWeatherData data = weeklyList.get(position);
 
         holder.tvDay.setText(data.getDay());
-        holder.tvCondition.setText(data.getCondition());
         holder.tvHighTemp.setText(data.getHighTemp() + "°");
         holder.tvLowTemp.setText(data.getLowTemp() + "°");
         holder.tvRainChance.setText(data.getRainChance() + "%");
+        holder.tvCondition.setText(data.getCondition());
+        holder.tvRainChance.setText(data.getRainChance() + "%");
 
-        // Set weather icon based on condition
-        setWeatherIcon(holder.ivWeatherIcon, data.getCondition());
-
-        // Add click listener for each item
-        holder.itemView.setOnClickListener(v -> {
-            // You can add detailed view for each day here
-            // For now, just show a toast
-            android.widget.Toast.makeText(v.getContext(),
-                    "Detailed forecast for " + data.getDay() + " coming soon!",
-                    android.widget.Toast.LENGTH_SHORT).show();
-        });
-    }
-
-    private void setWeatherIcon(ImageView imageView, String condition) {
-        switch (condition.toLowerCase()) {
-            case "sunny":
-            case "clear":
-                imageView.setImageResource(R.drawable.cuaca);
-                break;
-            case "rainy":
-            case "rain":
-                imageView.setImageResource(R.drawable.hujan);
-                break;
-            case "partly cloudy":
-            case "cloudy":
-            case "clouds":
-                imageView.setImageResource(R.drawable.cuaca);
-                break;
-            case "thunderstorm":
-                imageView.setImageResource(R.drawable.hujan);
-                break;
-            default:
-                imageView.setImageResource(R.drawable.cuaca);
-                break;
+        // Set icon drawable by icon name
+        int iconResId = holder.itemView.getContext().getResources()
+                .getIdentifier(data.getWeatherIcon(), "drawable", holder.itemView.getContext().getPackageName());
+        if (iconResId != 0) {
+            holder.ivWeatherIcon.setImageResource(iconResId);
+        } else {
+            holder.ivWeatherIcon.setImageResource(R.drawable.cuaca); // default icon
         }
     }
 
     @Override
     public int getItemCount() {
-        return weeklyList.size();
+        return weeklyList != null ? weeklyList.size() : 0;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
